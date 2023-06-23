@@ -34,8 +34,20 @@ android {
     }
 }
 
+sourceControl {
+    gitRepository("https://github.com/sangcomz/FishBun.git") {
+        producesModule("ocom.sangcomz:FishBun")
+    }
+}
+
+
 dependencies {
     implementation 'androidx.exifinterface:exifinterface:1.3.1'
-    implementation 'com.sangcomz:FishBun:0.11.4'
+    //implementation 'com.sangcomz:FishBun:1.1.1'
+    implementation('com.sangcomz:FishBun') {
+        version {
+            branch = '0.11.4'
+        }
+    }
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 }
